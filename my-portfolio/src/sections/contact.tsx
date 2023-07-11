@@ -1,9 +1,21 @@
 import Button from '@/components/button';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function Contact() {
   return (
-    <div id='contact' className='contact'>
+    <motion.div
+      id='contact'
+      className='contact'
+      initial='hidden'
+      viewport={{ once: true }}
+      whileInView={'visible'}
+      transition={{ duration: 0.6 }}
+      variants={{
+        visible: { opacity: 1, y: -50 },
+        hidden: { opacity: 0, y: 0 },
+      }}
+    >
       <h2 className='contact-title'>What&apos;s Next</h2>
       <h2 className='contact-sub-title'>Get in Touch</h2>
       <p className='contact-text'>
@@ -14,7 +26,7 @@ function Contact() {
       <div className='contact-cta'>
         <Button link={'mailto:tripurarisingh159@gmail.com'} text='Say Hello' />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
