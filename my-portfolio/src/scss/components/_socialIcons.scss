@@ -43,4 +43,10 @@
       margin: 0px auto;
     }
   }
+  @media screen and (max-width: 1080px) {
+    left: 2rem;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }

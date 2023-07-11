@@ -116,4 +116,46 @@
       }
     }
   }
+  @media screen and (max-width: 968px) {
+    .title {
+      h2 {
+        &::after {
+          width: 100px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    margin: 5rem auto;
+    .container {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+      .exp-details {
+        height: max-content;
+      }
+      .exp-slider {
+        display: flex;
+        overflow-x: scroll;
+        &-item {
+          height: 100px;
+          width: 200px !important;
+        }
+        &::before {
+          display: none;
+        }
+        .underline {
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .title {
+      h2 {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
 }
